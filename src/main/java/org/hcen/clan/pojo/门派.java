@@ -1,12 +1,15 @@
 package org.hcen.clan.pojo;
 
 
+import lombok.Data;
+
 import java.util.List;
 
 /**
- * this is a clan
- * in which has many people called
+ * 这是世界的基础 门派
+ * 也是人们发展的单位
  */
+@Data
 public class 门派 {
     private List<弟子> 门人;
     private Double 杂役;
@@ -14,6 +17,4 @@ public class 门派 {
     private List<山峰> 设施;
     private List<物品> 资源;
     private Double 庇护民众;
-
-
 }

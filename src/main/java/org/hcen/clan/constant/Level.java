@@ -15,4 +15,8 @@ public class Level {
         int level = ThreadLocalRandom.current().nextInt(0, 10);
         return new Level(level+"",level);
     }
+
+    public boolean isMax() {
+        return level==10;
+    }
 }

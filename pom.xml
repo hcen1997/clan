@@ -17,6 +17,8 @@
     </parent>
     <properties>
         <java.version>11</java.version>
+        <maven.compele.target>11</maven.compele.target>
+        <maven.compele.source>11</maven.compele.source>
     </properties>
     <dependencies>
         <dependency>

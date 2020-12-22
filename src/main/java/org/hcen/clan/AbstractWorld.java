@@ -43,13 +43,13 @@ public class AbstractWorld {
     private void grow() {
         age = age + 1;
         // grow all objects withing the world
-        doGrow();
+        doGrowInOneTimeUnit();
         AbstractWorld.log.trace("当前世界年龄: "+ age);
         timeSync();
     }
 
     // children should impl this func
-    protected void doGrow() {
+    protected void doGrowInOneTimeUnit() {
         // stub~
     }
 

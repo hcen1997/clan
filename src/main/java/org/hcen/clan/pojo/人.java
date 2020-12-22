@@ -32,7 +32,11 @@ public class 人 {
           for (int i = 0; i < n; i++) {
                人 人 = new 人(Util.randName(),
                        0, Level.randOne(),0, 灵根类.randOne());
+               ans.add(人);
           }
           return ans;
+     }
+     public Level getLevel(){
+          return Level.calLevel(energy);
      }
 }

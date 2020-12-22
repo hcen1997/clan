@@ -12,7 +12,7 @@ public class App {
     public static void main(String[] args) {
         SpringApplication.run(App.class);
         info();
-        World theOne = World.TheOne();
+        AbstractWorld theOne = World.TheOne();
         theOne.run();
         end();
     }

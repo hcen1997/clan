@@ -11,7 +11,7 @@ import java.util.List;
  */
 @Data
 public class 门派 {
-    private List<弟子> 门人;
+    private List<人> 门人;
     private Double 杂役;
     private Double 灵石;
     private List<山峰> 设施;

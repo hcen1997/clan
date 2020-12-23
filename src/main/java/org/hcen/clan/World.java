@@ -15,8 +15,6 @@ import java.util.List;
 public class World extends AbstractWorld {
     private final List<人> 人s =人.born(10) ;
 
-
-
     @Autowired
     private 飞升之路 飞升;
 
@@ -37,5 +35,8 @@ public class World extends AbstractWorld {
         死亡名单.forEach(s -> {
             人s.removeIf(人 -> 人.getName().equals(s));
         });
+        if(人s.size()==0){
+            setAllDead(true);
+        }
     }
 }

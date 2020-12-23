@@ -44,6 +44,10 @@ public class 人 {
         return Level.calLevel(energy);
     }
 
+    public int getMaxAge() {
+        return getLevel().getMaxAge();
+    }
+
     public long updateEnergyBy灵根() {
         energy += 灵根.getAmntPerTimeUnit();
         return energy;

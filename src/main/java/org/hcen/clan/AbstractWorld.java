@@ -1,10 +1,17 @@
 package org.hcen.clan;
 
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.hcen.clan.constant.TimeUnit;
+import org.hcen.clan.pojo.人;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 public class AbstractWorld {
+    @Setter
+    private boolean isAllDead = false;
     private static Integer MAX_AGE = 100_0000;
     private static TimeUnit TIME_UNIT = TimeUnit.年;
     // 现实世界纳秒对比模拟世界年 // 1秒1年
@@ -22,6 +29,10 @@ public class AbstractWorld {
             grow();
             if(age%1000==0){
                 log.info("一千年过去了 当前世界年龄: "+ age);
+            }
+            if(isAllDead){
+                log.info("所有意识体已死亡，世界终结于 "+ age);
+                break;
             }
         }
     }

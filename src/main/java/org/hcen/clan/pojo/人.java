@@ -2,6 +2,7 @@ package org.hcen.clan.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import org.hcen.clan.Util;
 import org.hcen.clan.constant.Level;
 import org.hcen.clan.constant.灵根类;
@@ -12,16 +13,16 @@ import java.util.List;
 /**
  * 这是基础智慧单位
  */
-@Data
 @AllArgsConstructor
 public class 人 {
 
      @Deprecated
      private 人(){}
-
+     @Getter
      private String name;
      private int age;
      private Level level;
+     @Getter
      private long energy;
      private 灵根类 灵根;
      public static List<人> born(int n){
@@ -38,5 +39,10 @@ public class 人 {
      }
      public Level getLevel(){
           return Level.calLevel(energy);
+     }
+
+     public long updateBy灵根(){
+          energy+= 灵根.getAmntPerTimeUnit();
+          return energy;
      }
 }

@@ -4,18 +4,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.hcen.clan.pojo.人;
 import org.hcen.clan.service.飞升之路;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Slf4j
+@Service
 public class World extends AbstractWorld {
+    private final List<人> 人s =人.born(10) ;
 
-    private final List<人> 人s;
 
-    World() {
-        super();
-        人s = 人.born(10);
-    }
 
     @Autowired
     private 飞升之路 飞升;

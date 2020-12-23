@@ -5,7 +5,6 @@ import org.hcen.clan.constant.TimeUnit;
 
 @Slf4j
 public class AbstractWorld {
-    private static AbstractWorld world;
     private static Integer MAX_AGE = Integer.MAX_VALUE;
     private static TimeUnit TIME_UNIT = TimeUnit.年;
     // 现实世界纳秒对比模拟世界年
@@ -14,13 +13,6 @@ public class AbstractWorld {
 
     protected AbstractWorld() {
         age = 0;
-    }
-
-    public static AbstractWorld TheOne() {
-        if (AbstractWorld.world == null) {
-            AbstractWorld.world = new AbstractWorld();
-        }
-        return AbstractWorld.world;
     }
 
     public  void  run() {

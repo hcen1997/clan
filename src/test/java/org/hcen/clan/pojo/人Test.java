@@ -11,7 +11,9 @@ public class 人Test {
     public void getLevel() {
         List<人> born = 人.born(1);
         人 one = born.get(0);
-        one.setEnergy(1000000000L);
+        for (int i = 0; i < 1000_0000; i++) {
+            one.updateBy灵根();
+        }
         boolean max = one.getLevel().isMax();
         assert max;
     }

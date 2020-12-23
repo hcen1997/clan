@@ -1,21 +1,16 @@
 package org.hcen.clan;
 
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
 @SpringBootApplication
-public class App {
-
-    public static void main(String[] args) {
-        SpringApplication.run(App.class);
-        info();
-        AbstractWorld theOne = World.TheOne();
-        theOne.run();
-        end();
-    }
+public class App implements CommandLineRunner {
+    @Autowired
+    World theOne;
 
     private static void info() {
         log.info("天地初开，宇宙混沌。");
@@ -32,4 +27,14 @@ public class App {
         log.info("再见了，观察者。");
     }
 
+    public static void main(String[] args) {
+        SpringApplication.run(App.class);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        info();
+        theOne.run();
+        end();
+    }
 }

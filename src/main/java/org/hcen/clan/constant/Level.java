@@ -53,6 +53,7 @@ public class Level {
     }
 
     public int getMaxAge() {
-        return level*100 + level*level*60 + level*level*level*20 + 100;
+//         [100, 255, 628, 1351, 2556, 4375, 6940, 10383, 14836, 20431]
+        return level*90 + level*level*43 + level*level*level*22 + 100;
     }
 }

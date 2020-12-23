@@ -12,7 +12,7 @@ public class 人Test {
         List<人> born = 人.born(1);
         人 one = born.get(0);
         for (int i = 0; i < 1000_0000; i++) {
-            one.updateBy灵根();
+            one.updateEnergyBy灵根();
         }
         boolean max = one.getLevel().isMax();
         assert max;

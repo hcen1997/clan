@@ -47,4 +47,12 @@ public class Level {
     public boolean isMax() {
         return level == 10;
     }
+
+    public String getName(){
+        return String.valueOf(level);
+    }
+
+    public int getMaxAge() {
+        return level*100 + level*level*60 + level*level*level*20 + 100;
+    }
 }

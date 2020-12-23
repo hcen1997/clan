@@ -4,7 +4,7 @@ logging:
   file:
     name: ./log/my.log
   level:
-    org.hcen.clan: trace
+    org.hcen.clan: info
 spring:
   output:
     ansi:

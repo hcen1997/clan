@@ -2,6 +2,7 @@ package org.hcen.clan.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.hcen.clan.Util;
 import org.hcen.clan.constant.Level;
 import org.hcen.clan.constant.灵根类;
@@ -13,6 +14,7 @@ import java.util.List;
  * 这是基础智慧单位
  */
 @Data
+@Slf4j
 @AllArgsConstructor
 public class 人 {
 
@@ -36,6 +38,8 @@ public class 人 {
                     0, 0, Level.randOne(), 0, 灵根类.randOne());
             人.setMaxAge(人.getLevel().getMaxAge());
             ans.add(人);
+            log.info(String.format("%s 出生了，灵根是%s, 最大年龄%s",
+                    人.name,人.灵根.getName(),人.getMaxAge()));
         }
         return ans;
     }

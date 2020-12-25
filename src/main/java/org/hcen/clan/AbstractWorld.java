@@ -31,7 +31,7 @@ public class AbstractWorld {
                 log.info("一千年过去了 当前世界年龄: "+ age);
             }
             if(isAllDead){
-                log.info("所有意识体已死亡，世界终结于 "+ age);
+                log.info("所有凡人已死亡，世界终结于 "+ age);
                 break;
             }
         }

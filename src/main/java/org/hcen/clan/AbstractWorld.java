@@ -52,7 +52,7 @@ public class AbstractWorld {
         // grow all objects withing the world
         doGrowInOneTimeUnit(age);
         AbstractWorld.log.trace("当前世界年龄: "+ age);
-        timeSync();
+//        timeSync();
     }
 
     // children should impl this func

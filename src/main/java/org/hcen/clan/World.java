@@ -29,6 +29,7 @@ public class World extends AbstractWorld {
             if( 人.getAge()>人.getMaxAge()){
                 log.error(String.format("修炼者 %s 死于 %d , 最大年龄 %s",人.getName(),this.age,
                         人.getMaxAge()));
+                log.debug("死亡时的能量为"+人.getEnergy());
                 死亡名单.add(人.getName());
             }
         }

@@ -13,9 +13,14 @@ public class 灵根类 {
     private int level;
     private int amntPerTimeUnit;
 
+
+    private 灵根类(int level) {
+        this(level + "", level, getAmntByLevel(level));
+    }
+
     public static 灵根类 randOne() {
         int level = ThreadLocalRandom.current().nextInt(0, 10);
-        return new 灵根类(level + "", level, getAmntByLevel(level));
+        return new 灵根类(level);
     }
 
     private static int getAmntByLevel(int level) {

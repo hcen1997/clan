@@ -13,6 +13,7 @@ public class Level {
     private static Level one = new Level();
     private String name;
     private int level;
+    private int finalLevel = 10;
 
     private Level(String name, int level) {
         this.name = name;
@@ -41,7 +42,7 @@ public class Level {
         }
         // 飞升了哦
 //        assert energy > map[map.length - 1];
-        return 10;
+        return finalLevel;
     }
 
     public boolean isMax() {
@@ -53,6 +54,9 @@ public class Level {
     }
 
     public int getMaxAge() {
+        if(level==finalLevel){
+            return Integer.MAX_VALUE;
+        }
 //        [100, 258, 652, 1432, 2748, 4750, 7588, 11412, 16372, 22618]
         return  100 + level * 90 + level * level * 43 + level * level * level * 22
                 +level * level * level * 3;

@@ -9,7 +9,7 @@ public class Level {
     public static final long[] MAP = new long[]{0L,
             100L, 500L, 1000L,
             2000L, 5000L, 10_000L,
-            50_000L, 200_000L, 10_000_000L};
+            50_000L, 100_000L, 200_000L};
     private static Level one = new Level();
     private String name;
     private int level;
@@ -53,7 +53,8 @@ public class Level {
     }
 
     public int getMaxAge() {
-//         [100, 255, 628, 1351, 2556, 4375, 6940, 10383, 14836, 20431]
-        return level * 90 + level * level * 43 + level * level * level * 22 + 100;
+//        [100, 258, 652, 1432, 2748, 4750, 7588, 11412, 16372, 22618]
+        return  100 + level * 90 + level * level * 43 + level * level * level * 22
+                +level * level * level * 3;
     }
 }

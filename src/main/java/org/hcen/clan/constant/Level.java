@@ -1,9 +1,11 @@
 package org.hcen.clan.constant;
 
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+@Slf4j
 @NoArgsConstructor
 public class Level {
     // 灵根界限其实是由上级定的
@@ -44,7 +46,14 @@ public class Level {
         }
         // 飞升了哦
 //        assert energy > map[map.length - 1];
-        return finalLevel;
+        boolean 过 = 渡天劫();
+        return 过?finalLevel:9;
+    }
+
+    private boolean 渡天劫() {
+//        log.info("有凡人妄想渡天劫，飞升");
+        int i = ThreadLocalRandom.current().nextInt(0, 999);
+        return i==0;
     }
 
     public boolean isMax() {

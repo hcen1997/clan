@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @NoArgsConstructor
 public class Level {
     // todo 让灵根等级决定最终成就
-    public static final long[] MAP = new long[]{0L,
+    private static final long[] MAP = new long[]{0L,
             100L, 500L, 1000L,
             2000L, 5000L, 10_000L,
             50_000L, 100_000L, 200_000L};
@@ -37,7 +37,7 @@ public class Level {
 
     private int doCalLevel(long[] map, long energy) {
         for (int i = 0; i < map.length; i++) {
-            if (energy < map[i]) {
+            if (energy <= map[i]) {
                 return i;
             }
         }

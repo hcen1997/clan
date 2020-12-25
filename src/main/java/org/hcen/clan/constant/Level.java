@@ -6,12 +6,12 @@ import java.util.concurrent.ThreadLocalRandom;
 
 @NoArgsConstructor
 public class Level {
-    // todo 让灵根等级决定最终成就
-    // todo 1灵根4k年龄不可取
-    private static final long[] MAP = new long[]{0L,
-            500L, 1_000L, 1100L,
-            2000L, 5000L, 10_000L,
-            50_000L, 100_000L, 200_000L};
+    // 灵根界限其实是由上级定的
+    // 这里甚至可以写 上一级灵根在本级年龄界限的能力值
+    private static final long[] 灵根界限 = new long[]{0L,
+            500L, 1500, 5000,
+            11_000L, 25_000L, 50_000L, // 6级灵根卡脖子
+            90_000L, 140_000L, 200_000L};
     private static Level one = new Level();
     private String name;
     private int level;
@@ -33,7 +33,7 @@ public class Level {
     }
 
     public static Level calLevel(long energy) {
-        return new Level(one.doCalLevel(MAP, energy));
+        return new Level(one.doCalLevel(灵根界限, energy));
     }
 
     private int doCalLevel(long[] map, long energy) {

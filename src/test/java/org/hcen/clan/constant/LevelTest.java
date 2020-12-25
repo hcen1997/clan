@@ -31,4 +31,12 @@ class LevelTest {
             System.out.println(" i*maxAge[i] = " + i * maxAge.get(i));
         }
     }
+
+    @Test
+    void 合道(){
+        // todo: 让人们死去
+        for (int i = 0; i < 10; i++) {
+            // 一个i级灵根的人应该有i级的寿命，如果他努力修炼
+        }
+    }
 }

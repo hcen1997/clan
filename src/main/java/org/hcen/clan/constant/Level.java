@@ -7,6 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @NoArgsConstructor
 public class Level {
     // todo 让灵根等级决定最终成就
+    // todo 1灵根4k年龄不可取
     private static final long[] MAP = new long[]{0L,
             100L, 500L, 1000L,
             2000L, 5000L, 10_000L,
